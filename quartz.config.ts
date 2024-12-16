@@ -66,7 +66,24 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.CrawlLinks({
+        markdownLinkResolution: "shortest",
+        substitutions: [
+          [
+            /Qx!(.+)/, // External quartz link, form Qx!https://quartz.jzhao.xyz
+            {
+              type: "element",
+              tagName: "img",
+              properties: {
+                src: "/static/external-quartz.png",
+                style: "max-width:1em;max-height:1em;margin:0px 2px",
+              },
+              children: [],
+            },
+          ],
+          [/Dg!(.*)/, "🪴"], // Digital gardens, Dg!https://maggieappleton.com/
+        ],
+      }),
       Plugin.Description(),
       Plugin.Remark42({
         host: "https://be-far.com/comments",
