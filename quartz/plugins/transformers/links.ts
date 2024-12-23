@@ -228,13 +228,11 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
 
                 if (!URL.canParse(node.properties.src)) {
                   let dest = node.properties.src as RelativeURL
-                  console.log(dest)
                   dest = node.properties.src = transformLink(
                     file.data.slug!,
                     dest,
                     transformOptions,
                   )
-                  console.log(dest)
                   node.properties.src = dest
                 }
               }
