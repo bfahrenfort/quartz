@@ -25,7 +25,7 @@ This plugin accepts the following configuration options:
     - `Image("/static/icon.png")`
     - `Emoji("🪴")`
     - `Path({code: "really long string like M320 0H288V64h32 82.7L201.4 265.4...", viewbox: "0 0 512 512"})`
-  - Example use: `substitutions: [ [/garden!(.+)/, Emoji("🪴")], ],` 
+  - Example use: `substitutions: [ [/garden!(.+)/, Emoji("🪴")], ],`
     - This would let you write links in Markdown like `[Someone's garden](garden!https://their-website.com)`, which would look like `Someone's Garden🪴` on the website.
 
 > [!warning]

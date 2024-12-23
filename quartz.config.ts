@@ -75,7 +75,7 @@ const config: QuartzConfig = {
         markdownLinkResolution: "shortest",
         // See https://quartz.jzhao.xyz/plugins/CrawlLinks
         // Try uncommenting the below line and writing [Someone's Garden](garden!https://jzhao.xyz/) in markdown
-        // substitutions: [ [/garden!(.+)/, Emoji("🪴")], ],
+        // substitutions: [[/garden!(.+)/, Emoji("🪴")]],
       }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
