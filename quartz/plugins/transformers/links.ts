@@ -13,7 +13,30 @@ import path from "path"
 import { visit } from "unist-util-visit"
 import { ElementContent, Root } from "hast"
 
-type Sub = [RegExp, string | ElementContent]
+type Sub = [RegExp, Appendable]
+type Appendable = (Image | Emoji | Path) & Tagged
+type Tagged = { type: "image" | "emoji" | "path" }
+type Image = { src: string }
+type Emoji = { text: string }
+type Path = {
+  code: string
+  viewbox: string
+}
+export function Image(src: string | Image): Appendable {
+  if (typeof src == "object") {
+    return src as Image & { type: "image" }
+  }
+  return { src: src, type: "image" }
+}
+export function Emoji(text: string | Emoji): Appendable {
+  if (typeof text == "object") {
+    return text as Emoji & { type: "emoji" }
+  }
+  return { text: text, type: "emoji" }
+}
+export function Path(path: Path): Appendable {
+  return path as Path & { type: "path" } // This errors if path is uncast. what
+}
 
 interface Options {
   /** How to resolve Markdown paths */
@@ -59,51 +82,85 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
               ) {
                 const href = node.properties.href
                 let dest = href as RelativeURL
-                let refIcon: string | ElementContent | null = null
+                let refIcon: ElementContent | null = null
                 let matched = false
+                // bfahrenfort: the 'every' lambda is like a foreach that allows continue/break
                 opts.substitutions?.every(([regex, sub]) => {
                   const parts = href.match(regex)
-                  if (parts != null) {
-                    dest = parts.slice(1).join("") as RelativeURL
-                    if (typeof sub == "object") {
-                      refIcon = sub
-                    } else {
-                      refIcon = { type: "text", value: sub }
-                    }
-                    matched = true
-                    return false // break equivalent
-                  }
-                  return true
-                })
-                node.properties.href = dest
-                const classes = (node.properties.className ?? []) as string[]
-                const isExternal = isAbsoluteUrl(dest)
-                classes.push(isExternal ? "external" : "internal")
+                  if (parts == null) return true // continue
 
-                if ((isExternal && opts.externalLinkIcon) || matched) {
-                  node.children.push(
-                    refIcon != null
-                      ? refIcon
-                      : {
+                  matched = true
+                  dest = parts.slice(1).join("") as RelativeURL
+                  switch (sub.type) {
+                    case "image":
+                      refIcon = {
+                        type: "element",
+                        tagName: "img",
+                        properties: {
+                          src: (sub as Image).src as FullSlug,
+                          style: "max-width:1em;max-height:1em",
+                        },
+                        children: [],
+                      }
+                      break
+                    case "emoji":
+                      refIcon = { type: "text", value: (sub as Emoji).text }
+                      break
+                    case "path":
+                      let vector = sub as Path
+                      refIcon = {
                         type: "element",
                         tagName: "svg",
                         properties: {
                           "aria-hidden": "true",
                           class: "external-icon",
-                          style: "max-width:0.8em;max-height:0.8em",
-                          viewBox: "0 0 512 512",
+                          style: "max-width:1em;max-height:1em",
+                          viewBox: vector.viewbox,
                         },
                         children: [
                           {
                             type: "element",
                             tagName: "path",
                             properties: {
-                              d: "M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z",
+                              d: vector.code,
                             },
                             children: [],
                           },
                         ],
-                      },
+                      }
+                      break
+                  }
+                  return false // break
+                })
+                node.properties.href = dest
+                const classes = (node.properties.className ?? []) as string[]
+                const isExternal = URL.canParse(dest)
+                classes.push(isExternal || matched ? "external" : "internal")
+
+                if ((isExternal && opts.externalLinkIcon) || matched) {
+                  node.children.push(
+                    refIcon != null
+                      ? refIcon
+                      : {
+                          type: "element",
+                          tagName: "svg",
+                          properties: {
+                            "aria-hidden": "true",
+                            class: "external-icon",
+                            style: "max-width:0.8em;max-height:0.8em",
+                            viewBox: "0 0 512 512",
+                          },
+                          children: [
+                            {
+                              type: "element",
+                              tagName: "path",
+                              properties: {
+                                d: "M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z",
+                              },
+                              children: [],
+                            },
+                          ],
+                        },
                   )
                 }
 
@@ -177,6 +234,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                     dest,
                     transformOptions,
                   )
+                  console.log(dest)
                   node.properties.src = dest
                 }
               }
