@@ -97,7 +97,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                         type: "element",
                         tagName: "img",
                         properties: {
-                          src: (sub as Image).src as FullSlug,
+                          src: (sub as Image).src,
                           style: "max-width:1em;max-height:1em",
                         },
                         children: [],
