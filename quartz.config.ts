@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { Image, Path, Emoji } from "./quartz/plugins/transformers/links"
 
 /**
  * Quartz 4.0 Configuration
@@ -70,7 +71,12 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.CrawlLinks({
+        markdownLinkResolution: "shortest",
+        // See https://quartz.jzhao.xyz/plugins/CrawlLinks
+        // Try uncommenting the below line and writing [Someone's Garden](garden!https://jzhao.xyz/) in markdown
+        // substitutions: [ [/garden!(.+)/, Emoji("🪴")], ],
+      }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],

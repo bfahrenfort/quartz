@@ -19,6 +19,14 @@ This plugin accepts the following configuration options:
 - `openLinksInNewTab`: If `true`, configures external links to open in a new tab. Defaults to `false`.
 - `lazyLoad`: If `true`, adds lazy loading to resource elements (`img`, `video`, etc.) to improve page load performance. Defaults to `false`.
 - `externalLinkIcon`: Adds an icon next to external links when `true` (default) to visually distinguishing them from internal links.
+- `substitutions`: default `[]`, a list of regex-image pairs. When you write a link's URL to match the regex, it will display the image after the link on your webpage.
+  - images may either be an `Image(url)`, `Emoji(text)`, or `Path({code: code, viewbox: viewbox})`. Examples:
+    - `Image("https://website.com/image.jpg")`
+    - `Image("/static/icon.png")`
+    - `Emoji("🪴")`
+    - `Path({code: "really long string like M320 0H288V64h32 82.7L201.4 265.4...", viewbox: "0 0 512 512"})`
+  - Example use: `substitutions: [ [/garden!(.+)/, Emoji("🪴")], ],` 
+    - This would let you write links in Markdown like `[Someone's garden](garden!https://their-website.com)`, which would look like `Someone's Garden🪴` on the website.
 
 > [!warning]
 > Removing this plugin is _not_ recommended and will likely break the page.
