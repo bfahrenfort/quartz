@@ -98,7 +98,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                         tagName: "img",
                         properties: {
                           src: (sub as Image).src,
-                          style: "max-width:1em;max-height:1em",
+                          style: "max-width:1em;max-height:1em;margin:0px",
                         },
                         children: [],
                       }
@@ -137,6 +137,8 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 const isExternal = URL.canParse(dest)
                 classes.push(isExternal || matched ? "external" : "internal")
 
+                // If the link matched a substitution, display the corresponding image afterwards;
+                //  otherwise, if it's an external link, display the default external link icon
                 if ((isExternal && opts.externalLinkIcon) || matched) {
                   node.children.push(
                     refIcon != null
