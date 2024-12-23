@@ -11,7 +11,6 @@ import {
 } from "../../util/path"
 import path from "path"
 import { visit } from "unist-util-visit"
-import isAbsoluteUrl from "is-absolute-url"
 import { ElementContent, Root } from "hast"
 
 type Sub = [RegExp, string | ElementContent]
@@ -124,7 +123,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 }
 
                 // don't process external links or intra-document anchors
-                const isInternal = !(isAbsoluteUrl(dest) || dest.startsWith("#"))
+                const isInternal = !(URL.canParse(dest) || dest.startsWith("#"))
                 if (isInternal) {
                   dest = node.properties.href = transformLink(
                     file.data.slug!,
@@ -170,8 +169,9 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   node.properties.loading = "lazy"
                 }
 
-                if (!isAbsoluteUrl(node.properties.src)) {
+                if (!URL.canParse(node.properties.src)) {
                   let dest = node.properties.src as RelativeURL
+                  console.log(dest)
                   dest = node.properties.src = transformLink(
                     file.data.slug!,
                     dest,
