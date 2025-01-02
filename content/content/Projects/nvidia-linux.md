@@ -70,34 +70,7 @@ GTK 4.16 (in conjunction with the release of GNOME 47) swapped to Vulkan rendere
 # In /etc/environment
 GSK_RENDERER=ngl
 ```
-### Crash on Startup or Mutter using Wrong GPU
-Sometimes, Mutter will auto-select the wrong GPU and put your NVIDIA GPU into copy mode, hindering performance. This also might cause a crash on startup. 
-```sh
-# First, find out what DRI cards are visible
-ls /dev/dri
-card0
-card1
 
-# Then, query to find the PCI ID
-udevadm info --query=all --name /dev/dri/card0
-udevadm info --query=all --name /dev/dri/card1
-# Look for the line with "ID_PATH", pci-0000:xx:xx.x
-
-## Figure out which PCI ID is your card 
-lspci -nn | grep NVIDIA
-xx:xx.x VGA compatible controller [0300]: NVIDIA Corporation ...
-
-# replace cardX with the card0 or card1 etc which you identified as nvidia
-# write the below line into /etc/udev/rules.d/61-mutter.rules
-ENV{DEVNAME}=="/dev/dri/cardX", TAG+="mutter-device-preferred-primary"
-
-# Restart display manager (THIS WILL LOG YOU OUT)
-sudo systemctl restart gdm
-
-# verify
-journalctl -b --grep primary
-.....: GPU /dev/dri/cardX selected primary given udev rule
-```
 ## X11
 This config recipe will set the same options for every device using the nvidia drivers:
 

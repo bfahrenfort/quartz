@@ -6,17 +6,9 @@ tags:
 date: 2024-12-12
 lastmod: 2024-12-12
 ---
-I've made the difficult decision to divide my massive AI essay, which approached 10k words at its most verbose, into a more digestible atomic format. You can pick and choose the rabbit holes you go down. Start at [[Atomic/gen-ai|Generative AI]].
+This is only recently after my one year of garden maintenance announcement, but I now have a full calendar year of updates to show! Here's to a great 2025. Happy New Year, y'all.
 ## Pages
-- New: **The AI Essay**
-	- [[Misc/ai-prologue|Prologue]]
-	- [[Atomic/gen-ai|Atomic: Generative AI]]
-	- [[Atomic/neural-network|Atomic: Neural Network]]
-	- [[Resources/copyright|Basic Principles of Copyright]]
-	- [[Essays/normative-ai|Why Copyright Should Apply to AI]]
-	- [[Misc/training-copyright|Theories of Copyright: AI Training]]
-	- [[Misc/generation-copyright|Theories of Copyright: AI Output]]
-## Status Updates
-- 
+- Content update: [[Projects/nvidia-linux|NVIDIA On Linux]]
+- New: [[Projects/ts-newtypes|Newtypes in Typescript]]
 ## Helpful Links
 [[todo-list|Site To-Do List]] | [[Garden/index|Home]]

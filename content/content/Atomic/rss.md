@@ -7,7 +7,7 @@ tags:
   - glossary
   - difficulty-easy
 date: 2024-11-26
-lastmod: 2024-12-13
+lastmod: 2024-11-26
 draft: false
 ---
 RSS, or Really Simple Syndication, is the most convenient and privacy-conscious way to subscribe to a website, social media account, and more. No site analytics, no page loading, no Javascript, no ads. All the website can see is that you pulled one file from it, but you can still read all the content that you wanted from the website in a compact format. 
@@ -34,7 +34,5 @@ If all else fails, they still might have a feed! Try these links and if one show
 - `site.com/rss.xml`
 
 You can also turn email lists into RSS feeds to unclutter your email with [Kill The Newsletter](https://kill-the-newsletter.com). 
-## The Future
+## RSS for developers
 I contribute to RSS feed integration, read my thoughts on it [[Projects/rss-foss|here]].
-
-A very small contender has popped up called [JSON Feed](https://jsonfeed.org), which aims to make developing for the open web easier by accomplishing the same thing as RSS in a much more widely used and parsed format.

@@ -6,7 +6,6 @@ tags:
   - misc
   - toc
 draft: false
-noRSS: true
 ---
 Here’s what I’m working on right now. Some of it might not make sense, I use this personally to keep track of what I’m writing. 
 
@@ -21,7 +20,6 @@ The date on this page will not be accurate in order to avoid spamming RSS feeds.
 - [ ] how to ruin a brand (google, SO, more generally Youtube)
 - [ ] *Fn Lock*
 - [ ] **Everything you need to know to swap to Linux**
-- [ ] *methodology*
 - [ ] *Judicial-action*
 - [ ] Add the third party doctrine to my-cloud, add the “if you aren’t persuaded to not use proprietary services, please be careful about what you put on them” section (google, tesla…)
     - [ ] https://www.404media.co/google-leak-reveals-thousands-of-privacy-incidents/ to my-cloud
