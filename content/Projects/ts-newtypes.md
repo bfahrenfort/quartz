@@ -4,6 +4,7 @@ tags:
   - programming
   - difficulty-easy
   - project
+  - typescript
 date: 2024-12-23
 lastmod: 2024-12-23
 draft: false

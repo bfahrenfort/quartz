@@ -57,6 +57,9 @@ This argument is not without its drawbacks. First, it does not say that anything
 
 Additionally, the simpler argument makes damages infinitely harder to prove. Okay, you're infringing; *whose work*? How much? It would effectively shift the complexity of analysis onto the backend. Where typically parties will employ a damages expert (a statistician, an accountant, or otherwise), they'll also have to find a data scientist to testify along the lines of "x% of the dataset being from y source equals z% in the output" so the damages expert can use that information. So even though it's a simpler argument, it requires breaking a lot more new ground.
 
+Of course, if we skip establishing the model as an infringing derivative, there's a small fair use argument that may gain a toehold. Previous cases have addressed when a copy is made for the purpose of providing a service, but the copy itself is never presented to users of the service. 
+==COUNTER-ARG: non-presentation to users of the copy==. However, it's unclear what effect the fact that the model *can* in some cases reproduce the copy would have on this analysis.
+
 Note that there are many conclusions in the USCO guidance (and my favorite analogy, that genAI is like a commission artist), so you should definitely read the whole thing if you're looking for a complete understanding of the (very scarce) actual legal coverage of AI issues so far.
 ## Further Reading
 - Sibling entry on [[Misc/training-copyright|training and copyright]]

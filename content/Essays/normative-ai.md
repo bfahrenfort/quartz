@@ -20,6 +20,7 @@ The most important debate is up first, but the others are not particularly order
 > - economic incentives
 > - roadblocks to enforcement
 > - the effect on truth
+> - AI in professions with ethical requirements upon practitioners (this may have to be its own essay)
 
 ## Fair Use
 In modern copyright practice, this defense seems to be the pivotal question. It's probably going to be the exact same in AI.
@@ -42,10 +43,14 @@ First, *why* is the model being produced? It's for the sole purpose of regurgita
 Next, let's look at how it's encoded. The key link between training and generation is that a trained model infringes the input for reproducing its expression as a compilation derivative, because it can be used to generate a literal reproduction of that expression. Not all of these "reproductions of expression" are direct copy-pastes of the words on the page, but the most striking ones are. 
 
 But for generated output, this factor gets messier. Is the work "criticism or comment"? Of/on who/what? I can think of one use that would be fair use, but only to defend the person using the model to generate text: criticism of the model itself, or demonstration that it can reproduce copyrighted works. Not to mention, if a publisher actually sued a person for *using* a generative AI, that would Streisand Effect the hell out of whatever was generated.
+
+==The primary argument in favor of fair use on this point is that the use is transformative; 
+
+As mentioned above, the fact that data on the scale of "the approximate sum total of human experience" is the subject of training doesn't strictly weigh in on the fair use factors that concern other types of quantities. I think it highlights that copyright isn't a 100% perfect fit for regulating AI. I don't think it means copyright is a bad vehicle, because any application of existing law to a) a new technology and/or b) an economy of \[absurd\] scale is going to be a little rough. Nevertheless, the point of a fair use analysis is to consider all the factors, so it's worth highlighting this incongruency between the law and the tech.
 ### Market value, or competition
-And most importantly (especially in recent years), let's talk about the competitive position of an AI model. This is directly linked to the notion that AI harms independent artists, and is the strongest reason for enforcement of copyright against AI in my opinion. 
+And most importantly (especially in recent years), the competitive position of an AI model pits it directly against artists and authors at the same commercial stage. This is directly linked to the notion that AI harms independent artists, and is the strongest reason for enforcement of copyright against AI in my opinion. 
 
-
+The weakness of this factor is that for generated works, it ties the **entire** technological context together. First, mere competition would not be enough to defeat this factor. Working back to front, the final step which may result in fair use for some generated AI works is that they must compete *by* infringing. This means the model must be *capable* of reproducing expressive works; which requires the technical understanding that models necessarily encode the expressive content of works; which requires that they were reproduced in that format via training. 
 
 Interestingly, I think the USCO Guidance [[#Detour 2 An Alternative Argument|talked about in the Generation section]] is instructive. It analogizes prompting a model to commissioning art, which applies well to a discussion of competition. AI lets me find an artist and say to them, "I want a Warhol, but I don't want to pay Warhol prices"; or "I want to read Harry Potter, but I don't want to give J.K. Rowling my money \[for good reason\]." The purpose of AI's "work product" is solely to compete with human output. 
 - "I want a contract, but I can't afford a lawyer."
@@ -55,7 +60,9 @@ A problem I have not researched in detail is the level of competency in an alter
 
 Professionals might not even see AI as a competitor. Say a client comes to a software engineer and says "I made a website with AI, can you look it over and touch it up?" That poor engineer's first impression is that the work will take significantly longer, since it is now entirely the worst task of all: code review. Nonetheless, I think the professionals' opinion and the actual competitive potential shouldn't be considered. The important fact is that **genAI has the impression of an alternative, and does indeed lead consumers of individual and enterprise levels to use it instead of a human**, regardless of its efficacy.
 
-Note that there are very valid criticisms of being resistant to a technology solely because of the "AI is gonna take our jobs" sentiment. I think there are real parallels between that worry and a merits analysis of the competition factor. So if you're persuaded that AI skepticism is FUD over potentially losing one's job, that would probably mean that you disagree with my evaluation of this factor.
+Note that there are very valid criticisms of being resistant to a technology solely because of the "AI is gonna take our jobs" sentiment. I think there will be real parallels between that worry and a merits analysis of the competition factor. So if you're persuaded that AI skepticism is FUD over potentially losing one's job, that would probably mean that you disagree with my evaluation of this factor.
+
+On the aforementioned "final step" of competition by infringing, it's true that 
 ### Final thoughts on fair use
 I didn't see fit to engage with it in detail here, but amount and substantiality of the use would probably have some effect on AI depending on plaintiff. ==BIG PUBLISHER VS ARTIST?==
 ## Who's holding the bag?
@@ -68,7 +75,7 @@ Well, here it is once more. When the proprietor is a website (or, really, an "in
 
 I think that you can identify a strangely inverse relationship between fair use and § 230 immunity. If the content is directly what was put in (and is not fair use), then it's user content, and Section 230 immunity applies. If the content by an AI is *not* just the user's content and is in fact transformative fair use, then it's the website's content, not user content, and the website can be sued for the effects of their AI. Someone makes an investment decision based on the recommendation of ChatGPT? Maybe it's financial advice. I won't bother with engaging the effects further here. I have written about § 230 and AI [[no-ai-fraud-act#00230: Incentive to Kill|elsewhere]], albeit in reference to AI-generated user content *hosted* by the platform.
 ## The First Amendment and the "Right to Read"
-This argument favors allowing GAI to train on the entire corpus of the internet, copyright- and attribution-free, and bootstraps GAI output into being lawful as well. The position most commonly taken is that the First Amendment protects a citizen's right to information, and that there should be an analogous right for generative AI.
+This argument favors allowing GAI to train on the entire corpus of the internet, copyright- and attribution-free. This bootstraps GAI output into being lawful as well, because it upends the market competition factor. The position most commonly taken is that the First Amendment protects a citizen's right to information, and that there should be an analogous right for generative AI.
 
 The right to read, at least in spirit, is still being enforced today. Even the 5th Circuit (!!!) believed that this particular flavor of First Amendment claim would be likely to succeed on appeal after prevailing at the trial level. [*Book People v. Wong*](https://law.justia.com/cases/federal/appellate-courts/ca5/23-50668/23-50668-2024-01-17.html), No. 23-50668 (5th Cir. 2024) (not an AI case). It also incorporates principles from intellectual property law. Notably, this argument states that one can read the content of a work without diminishing the value of the author's expression (*i.e.*, ideas aren't copyrightable). As such, the output of an AI is not taking anything from an author that a human wouldn't take when writing something based on their knowledge. 
 
@@ -76,9 +83,9 @@ I take issue with the argument on two points that stem from the same technologic
 
 First, as a policy point, the argument incorrectly humanizes current generative AI. There are no characteristics of current GAI that would warrant the analogy between a human reading a webpage and an AI training on that webpage. Even emerging tools like the improperly named [Deep Document Understanding](https://github.com/infiniflow/ragflow/blob/main/deepdoc/README.md) —which claim to ingest documents "as \[a\] human being"—are just classifiers on stochastic data at the technical level, and are not actual "understanding."
 
-Second, and more technically, [[Atomic/gen-ai#Training|the training section]] is my case for why an AI does not learn in the same way that a human does in the eyes of copyright law. ==more==
+Second, and more technically, [[Atomic/gen-ai#Training|the training section]] is my case for why an AI does not learn in the same way that a human does in the eyes of copyright law. It also [[Misc/generation-copyright#Expression and Infringement|stores that information differently]].
 
-But for both of these points,  I can see where the confusion comes from. The previous leap in machine learning was called "[[Atomic/neural-network|neural networks]]", which definitely evokes a feeling that it has something to do with the human brain. Even more so when the techniques from neural network learners are used extensively in transformer models (that's those absurd numbers of parameters mentioned earlier).
+But for both of these points,  I can see where the confusion comes from. The previous leap in machine learning was called "[[Atomic/neural-network|neural networks]]", which definitely evokes a feeling that it has something to do with the human brain. Even more so when the techniques from neural net learners are used extensively in transformer models (that's those absurd numbers of parameters mentioned earlier).
 ## Points of concern, or "watch this space"
 These are smaller points that would cast doubt on the general zeitgeist around the AI boom that I found compelling. These may be someone else's undeveloped opinion, or it might be a point that I don't think I could contribute to in a valuable way. Many are spread across the fediverse; others are blog posts or articles. Others still would be better placed a Further Reading section, ~~but I don't like to tack on more than one post-script-style heading.~~ { *ed.: [[#Further Reading|so that was a fucking lie]]* }. If any become more temporally relevant, I may expand on them.
 - [Cartoonist Dorothy’s emotional story re: midjourney and exploitation against author intent](https://socel.net/@catandgirl/111766715711043428)

@@ -8,7 +8,7 @@ tags:
   - copyright
 date: 2024-01-13
 draft: false
-lastmod: 2024-03-31
+lastmod: 2025-02-10
 ---
 Expect this page to expand. I plan on fleshing it out it in tandem with a full argument on why AI training and output are both copyright infringement when the model was trained on copyrighted data, because copyright and plagiarism are inextricably linked.
 
@@ -52,7 +52,13 @@ Attribution in the field of AI consists of two things: making public just what a
 ### #1: Revealing what's behind the curtain
 First, AI holds itself out as authoritative. Wrongfully so, due to incessant "hallucination" (when an AI model, due to their status as glorified autocorrect, makes up some fact or source and insists that it is accurate). This subjects it to the same kind of concerns as any authoritative work under my views.
 
-Second and perhaps most importantly, because of the actual issue of AI bias, transparency in what an AI was trained on is paramount. As a society, the ability to question the source of some facts presented to us is already beneficial (as discussed elsewhere in this essay). But for AI, we need to ensure that the generated statements are not only correct, but not disregarding other positions categorically because they were made by sources that the AI incorrectly considers non-authoritative. An AI model could look at two positions, one with many more datapoints supporting it, and thus completely ignore the second position in its answer to a prompt. Now imagine that the former is a white man's perspective, and the second a black woman's. It's not inconceivable that an AI could enshrine systemic bias. Attribution allows people who've made careers in this field to critically examine a dataset and look for this sort of gap. In that way, it makes a **better** AI model (assuming the goal of AI is to be accurate) because of more community oversight, not just one that's more ethically trained. More information available at the [Distributed AI Research Institute](https://www.dair-institute.org/) from 
+Second and perhaps most importantly, because of the actual issue of AI bias, transparency in what an AI was trained on is paramount. 
+
+> "when these biases are reproduced in the synthetic text output by the machine, they are stripped of their original context, where they are more clearly situated as the ideas of people, and reified into something that seems to have come from an omniscient and impartial machine."
+>
+> - Bender & Shah, [Envisioning IA Systems](https://dl.acm.org/doi/10.1145/3649468)
+
+As a society, the ability to question the source of some facts presented to us is already beneficial to learning (as discussed elsewhere in this essay). But for AI, we need to ensure that the generated statements are not only correct, but not disregarding other positions categorically because they were made by sources that the AI incorrectly considers non-authoritative. An AI model could look at two positions, one with many more datapoints supporting it, and thus completely ignore the second position in its answer to a prompt. Now imagine that the former is a white man's perspective, and the second a black woman's. It's not inconceivable that an AI could enshrine systemic bias. Attribution allows people who've made careers in this field to critically examine a dataset and look for this sort of gap. In that way, it makes a **better** AI model (assuming the goal of AI is to be accurate) because of more community oversight, not just one that's more ethically trained. More information available at the [Distributed AI Research Institute](https://www.dair-institute.org/).
 - Sidebar: huh, turns out that this argument parallels the open-source philosophy.
 - Countless actual examples exist, too many to list. I documented one incident [here](https://social.treehouse.systems/@be_far/111990173625090669).
 - More directly related to my hypothetical, covert *racism* is present in LLMs as well because of the content of their training datasets. It's almost impossible to remove. But that's outside of the scope of this entry.

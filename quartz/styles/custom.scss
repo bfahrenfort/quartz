@@ -17,6 +17,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Atkinson NEXT";
+  src: url("/static/fonts/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Mono";
+  src: url("/static/fonts/AtkinsonHyperlegibleMono-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 //
 // Background/visual elements
 //

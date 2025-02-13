@@ -20,9 +20,10 @@ The date on this page will not be accurate in order to avoid spamming RSS feeds.
     - [ ] wget-pipe-tar-xzvf (internet archive)
 - [ ] how to ruin a brand (google, SO, more generally Youtube)
 - [ ] *Fn Lock*
-- [ ] **Everything you need to know to swap to Linux**
+- [ ] Everything you need to know to swap to Linux*
 - [ ] *methodology*
 - [ ] *Judicial-action*
+- [ ] *plagiarism*
 - [ ] Add the third party doctrine to my-cloud, add the “if you aren’t persuaded to not use proprietary services, please be careful about what you put on them” section (google, tesla…)
     - [ ] https://www.404media.co/google-leak-reveals-thousands-of-privacy-incidents/ to my-cloud
 - [ ] FPV

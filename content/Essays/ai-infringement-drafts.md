@@ -26,6 +26,8 @@ What makes truth as stated by humans different from fact-shaped output by AI?
 Statistically, what level of confidence will we accept as truth, and can AI get there?
 
 I really want to engage with other thinkers about authoritative information on this point. Molly White, if you're out there: how does it feel to be a significant contributor to what may become the last authoritative factual source on the internet?
+
+==Envisioning IA Systems, Schneier Book==
 ## Ethics
 Why is piracy ethical, but not AI training?
 WIP

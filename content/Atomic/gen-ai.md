@@ -9,11 +9,11 @@ tags:
   - programming
   - toc
 date: 2024-11-02
-lastmod: 2024-11-02
+lastmod: 2025-02-05
 draft: true
 ---
 Generative AI models from different sources are architected in a variety of different ways, but they all boil down to one abstract process: tuning an absurdly massive number of parameters to values that produce the most desirable output. (note: [CGP Grey's video on AI](https://www.youtube.com/watch?v=R9OHn5ZF4Uo) and its follow-up are mainly directed towards neural networks, but do apply to LLMs, and do a great job illustrating this). This process requires a gargantuan stream of data to use to calibrate those parameters and then test the model.
-- Sidebar: you're nearly guaranteed not to find the optimal combination of several billion parameters, each tunable to several decimals. When I say "desirable," I really mean "good enough." This phenomenon is called gradient descent, and it's a foundational visualization of how AI learns, but [it is](https://arxiv.org/abs/2212.07677) and [it isn't](https://arxiv.org/abs/2310.08540) the whole picture.
+- Sidebar: you're nearly guaranteed not to find the optimal combination of several billion parameters, each tunable to several decimals. When I say "desirable," I really mean "good enough." Incremental progress to "good enough" is called gradient descent, and it's a foundational visualization of how AI learns, but [it is](https://arxiv.org/abs/2212.07677) and [it isn't](https://arxiv.org/abs/2310.08540) the whole picture.
 
 Generative AI resembles a Chinese Room. [The Chinese Room](https://plato.stanford.edu/entries/chinese-room/) is a philosophical exercise authored by John Searle where the (in context, American) subject is locked in a room and receives symbols in Chinese slipped under the door. A computer program tells the subject what Chinese outputs to send back out under the door based on patterns and combinations of the input. The subject does not understand Chinese. Yet to an observer of Searle's room, it **appears** as if whoever is inside it has a firm understanding of the language.
 
@@ -67,5 +67,6 @@ This is the reason that the term "hallucination" is misleading: **all AI-generat
 - If you're *really* interested in the math behind an LLM (like I am, haha), [here's a great introduction to the plumbing of a transformer model](https://santhoshkolloju.github.io/transformers/).
 - [Pivot to AI](https://pivot-to-ai.com/) is a hilariously snarky newsletter (and RSS feed!) that lampoons AI and particularly AI hype for what it is.
 - Read about the problems that generative AI is causing at the [Distributed AI Research Institute](https://www.dair-institute.org/).
+- These findings are discussed elsewhere in the AI pages, but [USCO Guidance Part 1](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-1-Digital-Replicas-Report.pdf) and [USCO Guidance Part 2](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf) are generally good resources. My reservations which I question about the documents themselves are in [[Misc/usco-guidance|USCO Guidance]].
 
 Okay, so ChatGPT lies, right? Well if we invert GenAI, it would make a /gen AI lmao

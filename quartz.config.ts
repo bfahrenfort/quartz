@@ -20,7 +20,7 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Monaspace Neon",
+        header: "Atkinson Mono",
         body: "Inter",
         code: "Fira Code",
       },
@@ -68,21 +68,6 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({
         markdownLinkResolution: "shortest",
-        substitutions: [
-          [
-            /Qx!(.+)/, // External quartz link, form Qx!https://quartz.jzhao.xyz
-            {
-              type: "element",
-              tagName: "img",
-              properties: {
-                src: "/static/external-quartz.png",
-                style: "max-width:1em;max-height:1em;margin:0px 2px",
-              },
-              children: [],
-            },
-          ],
-          [/Dg!(.*)/, "🪴"], // Digital gardens, Dg!https://maggieappleton.com/
-        ],
       }),
       Plugin.Description(),
       Plugin.Remark42({

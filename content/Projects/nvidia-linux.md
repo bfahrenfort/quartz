@@ -5,11 +5,13 @@ tags:
   - difficulty-easy
   - foss
 date: 2024-03-26
-lastmod: 2024-11-02
+lastmod: 2025-02-09
 draft: false
 ---
 The year is 2024. NVIDIA on linux is in a usable state! Of course, there are still many pitfalls and options required for a good experience. This page documents every configuration trick I've used and has all the resources that you need to use it yourself.
 
+## TL;DR: The Tradeoff
+Wayland is smoother, less fragile (at least on GNOME), prettier, receives updates, and is close to hot plugging. X11 has a few percent more performance and (on an eGPU) doesn't stutter as much (possibly because of lower CPU overhead?).
 ## My Setup
 I have an RTX 3060 Ti connected to an eGPU dock that I use with my Framework laptop over Thunderbolt. More info [[Projects/my-computer|here]].
 
@@ -38,6 +40,8 @@ I've tested Wayland in its first daily-usable state for over a month now, and it
 
 Current caveats/niceties:
 - There's about a 10% performance hit on NVIDIA cards compared to X11.
+- Frame latency also takes a hit, even though my DE uses unredirecting to avoid forcing vsync on fulscreen applications. My offset in rhythm games goes up 11ms to compensate.
+- I'm unable to watch a youtube video on my internal monitor while playing a game on my main monitor, both will stutter and drop frames. I've tried playing with what devices are rendering what pieces of content to no avail.
 - If there's nothing (including a display server) running on the eGPU, hotplug works!
 	- My process is to disable the monitor in settings before unplugging, but even then sometimes it won't be detected on replug and requires a restart. YMMV.
 
@@ -64,6 +68,9 @@ August 2024 did not yield any new results. However, **September 2024**: Explicit
 - On Arch, you can test this by installing `mutter-dynamic-buffering` from the AUR. 
 
 ### GTK apps not opening
+> [!info]
+> This seems to be more stable now, and may not be needed in all cases.
+
 GTK 4.16 (in conjunction with the release of GNOME 47) swapped to Vulkan renderer by default. Vulkan has issues creating surfaces across display devices on Wayland, which is called PRIME in the X11 world. You may experience crashes in GTK apps for this reason. **Fix:**
 
 ```sh
@@ -77,6 +84,7 @@ Sometimes, Mutter will auto-select the wrong GPU and put your NVIDIA GPU into co
 ls /dev/dri
 card0
 card1
+(...)
 
 # Then, query to find the PCI ID
 udevadm info --query=all --name /dev/dri/card0
@@ -99,7 +107,9 @@ journalctl -b --grep primary
 .....: GPU /dev/dri/cardX selected primary given udev rule
 ```
 ## X11
-This config recipe will set the same options for every device using the nvidia drivers:
+X11 definitely feels better while gaming, but that comes at the cost of difficult setup.
+
+This config recipe may work for you to set the same options for every device using the nvidia drivers:
 
 ```xorg
 # File: /etc/X11/xorg.conf.d/10-nvidia.conf
@@ -121,6 +131,8 @@ EndSection
 ```
 
 The options for the nvidia driver are documented [here](https://download.nvidia.com/XFree86/Linux-x86_64/396.51/README/xconfigoptions.html).
+
+[egpu-switcher](https://github.com/hertg/egpu-switcher/) may help you automate parts of your process for switching between docked and undocked.
 ## More Resources
 Allow me to dump every other page that I've needed to comb through for a working nvidia card.
 - [Archwiki - NVIDIA](https://wiki.archlinux.org/title/NVIDIA) (useful on more distros than Arch!)
