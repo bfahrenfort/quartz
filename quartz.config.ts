@@ -17,8 +17,8 @@ const config: QuartzConfig = {
     baseUrl: "be-far.com",
     ignorePatterns: ["private", "**/templates"],
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
+      fontOrigin: "local",
+      cdnCaching: false,
       typography: {
         header: "Atkinson Mono",
         body: "Inter",

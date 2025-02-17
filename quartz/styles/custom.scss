@@ -2,16 +2,16 @@
 @use "./variables.scss" as *;
 
 @font-face {
-  font-family: "Monaspace Neon";
-  src: url("/static/fonts/heading-font.otf") format("opentype");
+  font-family: "Inter";
+  src: url("/static/fonts/Inter.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Monaspace Argon";
-  src: url("/static/fonts/main-font.otf") format("opentype");
+  font-family: "Fira Code";
+  src: url("/static/fonts/FiraCode.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
