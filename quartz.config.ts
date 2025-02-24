@@ -31,7 +31,7 @@ const config: QuartzConfig = {
           gray: "#868889", // Unread nodes and subtitles
           darkgray: "#202225", // Text
           dark: "#202225", // Code text
-          secondary: "#325738", // Links, title, and current node
+          secondary: "#027b1f", // Links, title, and current node
           tertiary: "#185ecd", // Visited nodes
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#fff23688",
