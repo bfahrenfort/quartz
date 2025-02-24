@@ -170,6 +170,12 @@ ul {
   padding: 16px 16px 2px 16px;
 }
 
+[saved-theme="dark"] .page > #quartz-body .sidebar.left {
+  @media all and not ($mobile) {
+    border: 2px solid var(--lightgray);
+    box-shadow: 8px 6px 0 0 var(--lightgray);
+  }
+}
 .page > #quartz-body .sidebar.left {
   @media all and not ($mobile) {
     border-radius: 1rem;
@@ -186,14 +192,14 @@ ul {
 }
 [saved-theme="dark"] .page > #quartz-body .sidebar.left:hover {
   @media all and not ($mobile) {
-    border: 2px solid #e9edfa;
-    box-shadow: 8px 6px 0 0 #e9edfa;
+    border: 2px solid #b2b4b6;
+    box-shadow: 8px 6px 0 0 #b2b4b6;
   }
 }
 .page > #quartz-body .sidebar.left:hover {
   @media all and not ($mobile) {
-    border: 2px solid #262835;
-    box-shadow: 8px 6px 0 0 #262835;
+    border: 2px solid var(--darkgray);
+    box-shadow: 8px 6px 0 0 var(--darkgray);
     // top: calc(1rem - 4px);
     // margin-left: calc(1rem - 2px);
     // margin-right: 34px;

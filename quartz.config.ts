@@ -26,22 +26,22 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#F2F2F2", // Backg
-          lightgray: "#bcc0cc", // Code Backg
-          gray: "#8c8fa1", // Unread nodes and subtitles
-          darkgray: "#45485f", // Text
-          dark: "#4c4f69", // Code text
+          light: "#f0f0f2", // Backg
+          lightgray: "#d8d8da", // Code Backg
+          gray: "#868889", // Unread nodes and subtitles
+          darkgray: "#202225", // Text
+          dark: "#202225", // Code text
           secondary: "#325738", // Links, title, and current node
-          tertiary: "#0E8390", // Visited nodes
+          tertiary: "#185ecd", // Visited nodes
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#131829", // Backg
-          lightgray: "#70778F", // Code Backg
+          light: "#202225", // Backg
+          lightgray: "#383b3d", // Code Backg
           gray: "#686D82", // Unread nodes and subtitles
-          darkgray: "#cdd6f4", // Text
-          dark: "#D2DAF5", // Code text
+          darkgray: "#f0f0f2", // Text
+          dark: "#f0f0f2", // Code text
           secondary: "#a6e3a1", // Links, title, and current node
           tertiary: "#89dceb", // Visited nodes
           highlight: "rgba(143, 159, 169, 0.15)",
