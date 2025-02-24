@@ -8,7 +8,8 @@ date: 2025-02-24
 lastmod: 2025-02-24
 draft: false
 ---
-> [!hint] This page lands from the [envs.net](https://envs.net) webring. 
+> [!hint]
+> This page lands from the [envs.net](https://envs.net) webring. 
 
 I'm [[about-me|Brandon]], a law student and hobby developer. I selfhost and do [[Projects/home|project]] writeups, and I like [[Essays/home|writing]] about tech info or news. 
 
