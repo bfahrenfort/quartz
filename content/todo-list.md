@@ -29,3 +29,4 @@ The date on this page will not be accurate in order to avoid spamming RSS feeds.
 - [ ] FPV
 - [ ] **Moving to FIDO2 and password managers**
 - [ ] In the interest of transparency and reducing barriers, put together and periodically update an entry with the tips in the legal profession that are typically institutional knowledge. Learning in Public: A Window into Private Law
+- [ ] Immich writeup

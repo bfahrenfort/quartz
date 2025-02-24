@@ -12,6 +12,8 @@ No updates in January; thanks for understanding.
 - New: [[Misc/usco-guidance|Misc: USCO Guidance]]
 - Content update: [[Projects/nvidia-linux|NVIDIA on Linux]]
 - New landing page: [[ring|Webring]]
+- Content update: [[Projects/home|Projects: Home]]
+- Content update: [[Projects/my-computer|My Computer]]
 ## Status Updates
 Heading font has changed to [Atkinson Hyperlegible Mono](https://www.brailleinstitute.org/freefont), derived from the Atkinson Hyperlegible NEXT family.
 ## Helpful Links

@@ -4,16 +4,19 @@ tags:
   - productivity
   - linux
   - difficulty-moderate
-date: 9-08-23
+date: 2023-08-23
+lastmod: 2025-02-24
 ---
 ## Hardware
-First off, I don’t believe in having more than one personal computer, as I think it’s wasteful, especially when your profession will provide you with an e-waste work laptop whether you like it or not. As such, I’m an eGPU apologist! My setup consists of a laptop connected to a Thunderbolt dock on one tb4 controller and an NVIDIA eGPU on the other. Speaking of…
+First off, I don’t believe in having more than one personal computer, as I think it’s wasteful, especially when your profession will provide you with an e-waste work laptop whether you like it or not. As such, I’m an eGPU apologist! My setup consists of a laptop connected to a Thunderbolt dock on one tb4 controller and an NVIDIA eGPU on the other.
+
+The main reason I bought a Framework was so I wouldn't have to replace the entire laptop (just the board) when I needed an upgrade. And I recently did just that! The swap took less than an afternoon. I haven't had any real problems with the package design change on the Core Ultra (which has P-cores, E-cores, and M-cores) in Linux, TLP power management seems spot on. And now my bandwidth actually saturates when playing games with the eGPU rather than just cpu throttling. Speaking of...
 ### Laptop
-- Framework Laptop, Batch 6
+- Framework Laptop, Batch 6 (originally an 11th gen i5)
     - Repairable, upgradeable, and wholly yours. This thing is amazing. 
     - I got in just early enough to be an "early adopter", but late enough that I was past the teething problems. 
-    - CPU: i5-1135g7
-    - RAM: 2x16gb of Taiwan’s finest 3200MHz
+    - CPU: Intel Core Ultra 155H (*upgraded!*)
+    - RAM: 2x16gb 5200MHz DDR5
     - SSD: 2tb gen3
     - Expansion Cards:
         - 1x 3D printed and custom magnetic charger adapter
