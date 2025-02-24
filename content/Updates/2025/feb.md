@@ -16,5 +16,7 @@ No updates in January; thanks for understanding.
 - Content update: [[Projects/my-computer|My Computer]]
 ## Status Updates
 Heading font has changed to [Atkinson Hyperlegible Mono](https://www.brailleinstitute.org/freefont), derived from the Atkinson Hyperlegible NEXT family.
+
+Grabbed parts of the [uchū](https://uchu.style/) color palette.
 ## Helpful Links
 [[todo-list|Site To-Do List]] | [[Garden/index|Home]]
