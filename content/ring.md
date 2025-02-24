@@ -1,5 +1,5 @@
 ---
-title: envs.net Webring
+title: Webring
 tags:
   - misc
   - programming
