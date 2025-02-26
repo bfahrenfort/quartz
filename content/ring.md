@@ -15,7 +15,7 @@ I'm [[about-me|Brandon]], a law student and hobby developer. I selfhost and do [
 
 Consider [[Atomic/what-is-a-garden|everything a work in progress]].
 
-My next big project is a massive collected explanation of how transformer models ("Generative AI") really works, and what legal implications that might have. Stay up to date by following my [Updates RSS feed](/Updates.xml).<sup><a class="internal" href="/Atomic/rss">What’s this?</a></sup>
+My next big project is a massive collected explanation of how transformer models ("Generative AI") really work, and what legal implications that might have. Stay up to date by following my [Updates RSS feed](/Updates.xml).<sup><a class="internal" href="/Atomic/rss">What’s this?</a></sup>
 
 <div id="newring">
     <div style="text-align: center;">
