@@ -1,6 +1,6 @@
 ---
 title: 02/25 - Summary of Changes
-draft: true
+draft: false
 tags:
   - "#update"
 date: 2025-02-05
