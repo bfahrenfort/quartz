@@ -5,13 +5,13 @@ tags:
   - misc
   - seedling
 date: 2024-02-28
-lastmod: 2024-08-31
+lastmod: 2025-03-13
 ---
 Rust's [[Programs I Like/functional-programming|functional patterns]] are great, but sometimes you need to get weird. What if you want to construct a struct type, but you (the programmer) don't know what types the fields will be while you're writing this? Rust has you covered in situations just like this one.
 
 It's important to note that **Rust does not have runtime dynamic typing**. All of this must be done at compile time. That's where the macro system comes in. Unlike C-style macros, it's not pure substitution, it's much more powerful: Rust inserts your code into the AST-manipulation step of the compiler. Rather than `rustc`, *you* parse the tokens and make your own types from them to then generate new tokens to pass to the compiler.
 ## Prerequisites
-See the [Rust Book on procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html). The syntax there is much more complicated because it uses `macro_rules!()`, but pay attention to what a crate has to have to use the macro features and the various types of macros.
+See the [Rust Book on procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html). The syntax there is much more complicated because it uses declarative `macro_rules!()`, but pay attention to what a crate has to have to use the macro features and the various types of macros.
 ## Cardinal syntax
 Now, let's ignore the builtin `proc_macro` crate in favor of `proc_quote`. This crate's `quote` macro is the meat of a procedural macro, as it returns what becomes actual code at compile time (a TokenStream). Its expansions are limited but very powerful. Here's a simple example with boilerplate stripped out:
 
@@ -41,6 +41,8 @@ let x = 5; let y = 5; let z = 5;
 ```
 
 Note that there will not be a space after the last semicolon, because the space is only a separator (goes between the elements), where the semicolon is part of the body (goes in every element).
+### Detour: the syn tax
+Proc macros like the ones explained here do come with a compilation time cost. If you're not interested, ensure that none of your dependencies use them with a project like the CI script and delightful pun [free-of-syn](https://github.com/fasterthanlime/free-of-syn).
 ## \#\[proc_macro_derive()\]
 [Rust traits](https://doc.rust-lang.org/book/ch10-02-traits.html) are powerful inheritance-like features that let the compiler know it can expect the "deriving" types to behave in the same way. What if you could generate trait implementations with a macro on the deriving type?
 

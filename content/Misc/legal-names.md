@@ -14,4 +14,6 @@ A collection of project/article/series names for law-adjacent subjects that I'll
   - Shamelessly stolen from Techdirt
 - A Straightforward Inquiry
 	- (re: *ex parte Young*)
+- Amorphous Bog
+    - (for trade secret discussion)
 - Executive Dysfunction 

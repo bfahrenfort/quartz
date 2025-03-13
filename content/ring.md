@@ -17,9 +17,9 @@ draft: false
 <div style="text-align:center;">This page lands from the <a class="external" href="https://envs.net">envs.net</a> webring.</pdiv
 <div id="newring">
     <div style="text-align: center;">
-        <a class="internal" href="https://envs.net/ring/?Action=prev&me=befar">previous</a> |
-        <a class="internal" href="https://envs.net/ring/?Action=random&me=befar">random</a> |
-        <a class="internal" href="https://envs.net/ring/?Action=next&me=befar">next</a>
+        <a class="internal" href="https://envs.net/ring/?action=prev&me=befar">previous</a> |
+        <a class="internal" href="https://envs.net/ring/?action=random&me=befar">random</a> |
+        <a class="internal" href="https://envs.net/ring/?action=next&me=befar">next</a>
         <br>
         <a href="https://envs.net/ring/">how to join this webring</a>
     </div>
