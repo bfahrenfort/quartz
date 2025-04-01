@@ -25,6 +25,8 @@ The most important debate is up first, but the others are not particularly order
 ## Fair Use
 In modern copyright practice, this defense seems to be the pivotal question. It's probably going to be the exact same in AI.
 
+Note that this doctrine is likely to be the second question answered by the courts. This analysis would only come into play once a court determines that the model does indeed train on works as a whole, not the facts. 
+
 I choose to link training fair use and generation fair use. Generation "uses" the works as encoded in the statistical model, which were naturally part of the data used for training. Technologically, they aren't different "uses" of the same data, they're just steps in a process (you're always going to generate with a trained model). Thus, if training is found to be fair use, generation would be fair use as well. **However**, there are arguments for fair use that would absolve the user who generated the content, yet still hold the proprietor of the model liable! This is another facet of copyright that needs to be uniquely applied to AI, as infringement is bilateral, yet fair use is more complex.
 
 Whenever a legal doctrine has strong roots in collective consciousness and policy, there's an epistemological question about how to approach the issue. The debate asks: in the abstract, should the courts protect what *descriptively is* considered within the bounds of protection, or what *ought to be* recognized by society as deserving protection? 

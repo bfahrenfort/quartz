@@ -54,9 +54,10 @@ The No Starch Press books on Linux are extremely good resources on the formal de
 
 Please seek out other independent bloggers who document their own linux journeys and learn from them. Chances are they're a lot more articulate about the subject than me. But if you'd like to hear my continued thoughts, I've written many miscellaneous pages on [linux](/tags/linux). And if you want to do what I do, you could start with the [more beginner-friendly projects I've undertaken](/tags/difficulty-easy). I wish you the best in becoming a Linux power user!
 ### Youtubers
-**Check "most popular" on these channels for the most informative content.**
+**Check "most popular" on these channels for the most informative introductory content.**
 
 -  [DistroTube](https://www.youtube.com/@DistroTube/videos): Covers a variety of small topics within linux, as well as lots of top-10 style content for distros and programs.
--  [The Linux Experiment](https://www.youtube.com/@TheLinuxEXP/videos): Great weekly news source on the state of Linux and open source projects. Also publishes comparison videos for sets of programs, and the occasional distro tier list.
+-  [The Linux Experiment](https://www.youtube.com/@TheLinuxEXP/videos) approachable weekly news source on the state of Linux and open source projects. Also publishes comparison videos for sets of programs, and the occasional distro tier list.
 - [Chris Titus Tech](https://www.youtube.com/@ChrisTitusTech/): Goes pretty in-depth on specific programs (web browsers, code editors, etc) and makes the occasional tutorial. Also tier lists, but his opinions on tier lists are not really suited to new users.
-- [Brodie Robertson](https://www.youtube.com/@BrodieRobertson): Reviewer on the bleeding edge. Don't take his advice if you want a daily driver (and ensure to actually explore the controversies that he makes you aware of), but he keeps on top of everything major in the Linux community. Good **podcast** channel at [Tech Over Tea](https://www.youtube.com/@TechOverTea).
+- [diinki](https://youtube.com/@diinkikot): Variety content for the hobby and community side of Linux, often with an ironic tone. 
+- [Brodie Robertson](https://www.youtube.com/@BrodieRobertson): Reviewer on the bleeding edge. Don't take his advice if you want a stable daily driver.  He is usually the first to know every major update or drama story in the Linux community, but ensure you actually research  the controversies that he makes you aware of and form your own opinions rather than respecting his take. He platforms smaller Linux creators on his **podcast** channel at [Tech Over Tea](https://www.youtube.com/@TechOverTea).

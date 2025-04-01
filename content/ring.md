@@ -28,7 +28,7 @@ draft: false
 </div>
 </blockquote>
 
-I'm [[about-me|Brandon]], a law student and hobby developer. I selfhost and do [[Projects/home|project]] writeups, and I like [[Essays/home|writing]] about tech info or news. 
+I'm [[about-me|Brandon]], a law student and hobby developer. I selfhost and do [[Projects/home|project]] writeups, and I like [[Essays/home|writing]] about tech info or news. Everything on this site is written by me, not generative AI; [[Projects/Obsidian/digital-garden#Block the bot traffic|Bots are blocked]]. 
 
 Consider [[Atomic/what-is-a-garden|everything a work in progress]].
 

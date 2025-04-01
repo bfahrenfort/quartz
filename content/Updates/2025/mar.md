@@ -1,16 +1,16 @@
 ---
 title: 03/25 - Summary of Changes
-draft: true
+draft: false
 tags:
   - "#update"
 date: 2025-03-01
-lastmod: 2025-03-01
+lastmod: 2025-03-31
 ---
 ## Housekeeping
-
+Very minimal updates due to midterms.
 ## Pages
+- New: [[Programs I Like/fido2|Passkeys - Almost Usable]]
 - Content Update: [[Programs I Like/rust-macros|Rust Macros]]
-## Status Updates
-- 
+- Fixed links on [[ring|Webring]], oops
 ## Helpful Links
 [[todo-list|Site To-Do List]] | [[Garden/index|Home]]
