@@ -5,7 +5,7 @@ tags:
   - seedling
   - security
 date: 2024-08-31
-lastmod: 2024-03-31
+lastmod: 2025-04-02
 draft: false
 ---
 Six months ago, I set out to replace passwords with passkeys everywhere I was able to, and store them in a software password manager along with a hardware authenticator to ensure cross-platform access to my logins. Here are my thoughts on the process, and some interesting cases.
@@ -51,3 +51,6 @@ I don't have an image, but eBay forced me to set a passkey with a pop-up on the 
 The target app asked me to set a passkey, but once I did, I couldn't find the option to use it to log in (I wasn't presented with it at the time of testing).
 
 This has thankfully been fixed, but when I first tried to set a passkey as 2FA on my Mastodon, it would only accept a hardware passkey on creation, and only a software passkey on authentication.
+
+## Further Reading
+Here's the most useful passkey compatibility database I've found. [link](https://www.passkeys.io/who-supports-passkeys)
