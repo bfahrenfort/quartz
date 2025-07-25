@@ -52,5 +52,7 @@ The target app asked me to set a passkey, but once I did, I couldn't find the op
 
 This has thankfully been fixed, but when I first tried to set a passkey as 2FA on my Mastodon, it would only accept a hardware passkey on creation, and only a software passkey on authentication.
 
+PayPal seems to think that the only way to use passkeys is on-device; despite having one stored in a password manager, sometimes when I access it on another device it prompts me to create another because the original was created on my phone. I recognize I’m using a third party manager but even with iCloud it syncs across devices, so I don’t know why they chose this model. 
+
 ## Further Reading
 Here's the most useful passkey compatibility database I've found. [link](https://www.passkeys.io/who-supports-passkeys)

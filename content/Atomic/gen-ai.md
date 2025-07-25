@@ -36,9 +36,9 @@ Training is a deterministic process. It's a pure, one-way, data-to-model transfo
 
 Training can't be analogized to human learning processes, because when an AI trains by "reading" something, it isn't reading for the *forest*; it's reading for the *trees*. In the model, if some words are more frequently associated together, then that association is more "correct" to generate in a given scenario than other options. A parameter sometimes called "temperature" determines how far the model will stray from the correct next word. And the only data to determine whether an association *is* correct would be that training input. This means that an AI trains only on the words as they are on the page. Training can't have some external indicator of semantics that a secondary natural-language processor on the generation side could. If it could, it would need some encoding—some expression—that it turns the facts into. Instead, it just incorporates the word as it read it in, and the data about the body of text it was contained in. 
 
-Some transformer models include a structure called a Multi-Layer Perceptron ("MLP" { *training is magic -ed*. }), which is often simplified as "the place where the AI stores facts." However, it's just another matrix-based component of the model with different math that makes it better at preserving a type of word associations: Mathematically, most word generation is linear (really linear-and-tomfoolery but whatever) on the probability-of-occurrence scale. An MLP corrects this mathematical limitation by adding "layers" of generation that roughly preserve associations in non-linearly separable data, a class which *includes* facts. As such, it makes the model perform better if MLPs get more authority over the output of the model in portions of the output where it makes sense to give it that control (and determining that "where" is yet another black box of training). If you've ever seen an AI hallucinate a falsehood in the next sentence after it's been trained on the correct answer, you know that the MLP isn't really storing facts.
+Some transformer models include a structure called a Multi-Layer Perceptron ("MLP" { *training is magic -ed*. }), which is often simplified as "the place where the AI stores facts." However, it's just another matrix-based component of the model with different math that makes it better at preserving a type of word associations: Mathematically, most word generation is linear (really linear-and-tomfoolery but whatever) on the probability-of-occurrence scale. An MLP corrects this mathematical limitation by adding "layers" of matrices that roughly preserve associations in non-linearly separable data, a class which *includes* facts. As such, it makes the model perform better if MLPs get more authority over the output of the model in portions of the output where it makes sense to give it that control (and determining that "where" is yet another black box of training). If you've ever seen an AI hallucinate a falsehood in the next sentence after it's been trained on the correct answer, you know that the MLP isn't really storing facts.
 - Phrases like "authority over the output" really belong in a generation section. It's probably an intuitive enough concept to be included here without further context though.
-- Sidebar: Taking this to its logical extreme and demonstrating that self-attention (or any sort of attention component, really) is not a substitute for short-term memory would solidify the fact that generative AI training cannot be likened to a human's capacity to process and store information. 
+- Sidebar: There are, of course, additional math components bolted on top to improve the "hallucinates a falsehood in the next sentence after training on the correct answer" issue. To solidify the fact that generative AI training cannot be likened to a human's capacity to process and store information, you could take this MLP argument its logical extreme and demonstrate that self-attention (or any sort of attention component, really) is a human-architected instruction, not a substitute for human short-term memory. 
 
 As such, idea and expression are meaningless distinctions to AI.
 
@@ -48,6 +48,13 @@ As such, idea and expression are meaningless distinctions to AI.
 <img src="/Attachments/common_crap.svg" alt="Common Crawl logo edited to say 'common crap' instead" style="padding:0% 5%">
 
 A very big middle finger to the Common Crawl dataset, whose CCBot still tries to scrape this website. [[Projects/Obsidian/digital-garden#Block the bot traffic!|Block the bot traffic]]. If I had the time or motivation, I would find a way to instead of blocking these bots, redirect them to an AI generated fanfiction featuring characters from The Bee Movie.
+
+> [!info]
+> Another middle finger to Perplexity, whose scraper with agent PerplexityBot will:
+> 1. Try to access nonexistent URLs on my site until fail2ban blocks it
+> 2. Try to access a real URL while blocked
+> 3. Recognize that it's been blocked and switch to the next IP address on its AWS subnet (18.97.9.xx)
+
 ## Generation
 Generative AI training, for LLMs, creates a sophisticated next-word predictor that generates text based on the words it has read and written previously. 
 
@@ -65,6 +72,7 @@ This is the reason that the term "hallucination" is misleading: **all AI-generat
 ## Further Reading
 - Read about [[Essays/normative-ai|why]] copyright law should be enforced against AI in its dedicated essay.
 - If you're *really* interested in the math behind an LLM (like I am, haha), [here's a great introduction to the plumbing of a transformer model](https://santhoshkolloju.github.io/transformers/).
+	- And mathematically, it's a bad architecture for incremental performance in its use case because it is incapable of correlating text understanding. [Token Embeddings Violate the Manifold Hypothesis](https://arxiv.org/abs/2504.01002)
 - [Pivot to AI](https://pivot-to-ai.com/) is a hilariously snarky newsletter (and RSS feed!) that lampoons AI and particularly AI hype for what it is.
 - Read about the problems that generative AI is causing at the [Distributed AI Research Institute](https://www.dair-institute.org/).
 - These findings are discussed elsewhere in the AI pages, but [USCO Guidance Part 1](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-1-Digital-Replicas-Report.pdf) and [USCO Guidance Part 2](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf) are generally good resources. My reservations which I question about the documents themselves are in [[Misc/usco-guidance|USCO Guidance]].

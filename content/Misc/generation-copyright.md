@@ -52,15 +52,13 @@ Naturally, there are occurrences where a human and an AI would reach approximate
 There's a more concise and less squishy argument that generative AI output infringes on its training dataset. 
 
 Recall that AI output taken right from the model (straight from the horse's mouth) is [not copyrightable according to USCO](https://www.federalregister.gov/documents/2023/03/16/2023-05321/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence). If the model's input is copyrighted, and the output can't be copyrighted, then there's nothing in the AI "black box" that adds to the final product, so it's literally *just* the training data reproduced and recombined. Et voila, infringement.
+- Note that there are many conclusions in the USCO guidance (and my favorite analogy, that genAI is like a commission artist), so you should definitely read the whole document if you're looking for a complete understanding of the (very scarce) actual legal coverage of AI issues so far.
 
 This argument is not without its drawbacks. First, it does not say that anything uncopyrightable will infringe something else. It does, however, mean that the defendant's likelihood of prevailing on a fair use defense could be minimal.
 
 Additionally, the simpler argument makes damages infinitely harder to prove. Okay, you're infringing; *whose work*? How much? It would effectively shift the complexity of analysis onto the backend. Where typically parties will employ a damages expert (a statistician, an accountant, or otherwise), they'll also have to find a data scientist to testify along the lines of "x% of the dataset being from y source equals z% in the output" so the damages expert can use that information. So even though it's a simpler argument, it requires breaking a lot more new ground.
 
-Of course, if we skip establishing the model as an infringing derivative, there's a small fair use argument that may gain a toehold. Previous cases have addressed when a copy is made for the purpose of providing a service, but the copy itself is never presented to users of the service. 
-==COUNTER-ARG: non-presentation to users of the copy==. However, it's unclear what effect the fact that the model *can* in some cases reproduce the copy would have on this analysis.
-
-Note that there are many conclusions in the USCO guidance (and my favorite analogy, that genAI is like a commission artist), so you should definitely read the whole thing if you're looking for a complete understanding of the (very scarce) actual legal coverage of AI issues so far.
+Of course, if we skip establishing the model as an infringing derivative, there's a small fair use argument that may gain a toehold. Previous cases have addressed when a copy is made for the purpose of providing a service, but the copy itself is never presented to users of the service. This transient use has previously been found to be fair use. However, AI models can in some cases reproduce the copy. In fact, one of the lauded features of bleeding-edge AI is its increasingly perfect recall from a dataset. So you're saying that as AI gets more advanced, it'll be easier for it to exactly reproduce what it was trained on? Sounds like an even better case for copyright infringement. I think this quality should affect a court's analysis of the nonpresentation argument.
 ## Further Reading
 - Sibling entry on [[Misc/training-copyright|training and copyright]]
 - Who should be responsible for the harm caused by a generated work? [[Essays/normative-ai#Who's holding the bag?]]

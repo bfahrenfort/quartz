@@ -16,6 +16,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "be-far.com",
     ignorePatterns: ["private", "**/templates"],
+    generateSocialImages: false, // TODO: tweak and enable
     theme: {
       fontOrigin: "local",
       cdnCaching: false,
