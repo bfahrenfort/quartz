@@ -71,33 +71,19 @@ export default ((opts?: Partial<Options>) => {
     )
   }
 
-  return (
-    <div class={classNames(displayClass, "toc")}>
-      <button
-        type="button"
-        id="toc"
-        class={fileData.collapseToc ? "collapsed" : ""}
-        aria-controls="toc-content"
-        aria-expanded={!fileData.collapseToc}
-      >
-        <h3>On This Page</h3>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="fold"
-        >
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </button>
-      <div id="toc-content" class={fileData.collapseToc ? "collapsed" : ""}>
-        <ul class="overflow">
+  TableOfContents.css = modernStyle
+  TableOfContents.afterDOMLoaded = concatenateResources(script, overflowListAfterDOMLoaded)
+
+  const LegacyTableOfContents: QuartzComponent = ({ fileData, cfg }: QuartzComponentProps) => {
+    if (!fileData.toc) {
+      return null
+    }
+    return (
+      <details class="toc" open={!fileData.collapseToc}>
+        <summary>
+          <h3>{i18n(cfg.locale).components.tableOfContents.title}</h3>
+        </summary>
+        <ul>
           {fileData.toc.map((tocEntry) => (
             <li key={tocEntry.slug} class={`depth-${tocEntry.depth}`}>
               <a href={`#${tocEntry.slug}`} data-for={tocEntry.slug}>

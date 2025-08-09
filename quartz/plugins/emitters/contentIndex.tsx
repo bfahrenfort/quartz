@@ -7,10 +7,9 @@ import { QuartzEmitterPlugin } from "../types"
 import { toHtml } from "hast-util-to-html"
 import { write } from "./helpers"
 import { i18n } from "../../i18n"
-import DepGraph from "../../depgraph"
 import chalk from "chalk"
 
-export type ContentIndexMap = Map<FullSlug, ContentDetails>
+export type ContentIndex = Map<FullSlug, ContentDetails>
 export type ContentDetails = {
   slug: FullSlug
   filePath: FilePath
@@ -45,7 +44,7 @@ const defaultOptions: Options = {
   feedDirectories: ["index"],
 }
 
-function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndexMap): string {
+function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndex): string {
   const base = cfg.baseUrl ?? ""
   const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<url>
     <loc>https://${joinSegments(base, encodeURI(slug))}</loc>
@@ -57,7 +56,7 @@ function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndexMap): string
   return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`
 }
 
-function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?: number): string {
+function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: number): string {
   const base = cfg.baseUrl ?? ""
 
   const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<item>
@@ -89,7 +88,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?:
     <channel>
       <title>${escapeHTML(cfg.pageTitle)}</title>
       <link>${base}</link>
-      <description>${!!limit ? `Last ${limit} notes` : "Recent notes"} on ${escapeHTML(
+      <description>${!!limit ? i18n(cfg.locale).pages.rss.lastFewNotes({ count: limit }) : i18n(cfg.locale).pages.rss.recentNotes} on ${escapeHTML(
         cfg.pageTitle,
       )}</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
@@ -102,27 +101,7 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
   opts = { ...defaultOptions, ...opts }
   return {
     name: "ContentIndex",
-    async getDependencyGraph(ctx, content, _resources) {
-      const graph = new DepGraph<FilePath>()
-
-      for (const [_tree, file] of content) {
-        const sourcePath = file.data.filePath!
-
-        graph.addEdge(
-          sourcePath,
-          joinSegments(ctx.argv.output, "static/contentIndex.json") as FilePath,
-        )
-        if (opts?.enableSiteMap) {
-          graph.addEdge(sourcePath, joinSegments(ctx.argv.output, "sitemap.xml") as FilePath)
-        }
-        if (opts?.enableRSS) {
-          graph.addEdge(sourcePath, joinSegments(ctx.argv.output, "index.xml") as FilePath)
-        }
-      }
-
-      return graph
-    },
-    async emit(ctx, content, _resources) {
+    async *emit(ctx, content, _resources) {
       // If we're missing an index file, don't bother with sitemap/RSS gen
       if (
         !(
@@ -156,6 +135,8 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
             (slug.startsWith(feed) || feed == "index")
           ) {
             linkIndex.set(slug, {
+              slug,
+              filePath: file.data.relativePath!,
               title: file.data.frontmatter?.title!,
               links: file.data.links ?? [],
               tags: file.data.frontmatter?.tags ?? [],

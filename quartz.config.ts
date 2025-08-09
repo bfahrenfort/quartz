@@ -16,7 +16,6 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "be-far.com",
     ignorePatterns: ["private", "**/templates"],
-    generateSocialImages: false, // TODO: tweak and enable
     theme: {
       fontOrigin: "local",
       cdnCaching: false,
@@ -98,7 +97,7 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
     ],
   },
 }
