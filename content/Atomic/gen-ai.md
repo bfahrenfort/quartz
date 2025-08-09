@@ -2,22 +2,23 @@
 title: Generative AI
 tags:
   - ai
-  - seedling
   - glossary
   - essay
   - legal
   - programming
   - toc
 date: 2024-11-02
-lastmod: 2025-02-05
-draft: true
+lastmod: 2025-08-09
+draft: false
 ---
 Generative AI models from different sources are architected in a variety of different ways, but they all boil down to one abstract process: tuning an absurdly massive number of parameters to values that produce the most desirable output. (note: [CGP Grey's video on AI](https://www.youtube.com/watch?v=R9OHn5ZF4Uo) and its follow-up are mainly directed towards neural networks, but do apply to LLMs, and do a great job illustrating this). This process requires a gargantuan stream of data to use to calibrate those parameters and then test the model.
-- Sidebar: you're nearly guaranteed not to find the optimal combination of several billion parameters, each tunable to several decimals. When I say "desirable," I really mean "good enough." Incremental progress to "good enough" is called gradient descent, and it's a foundational visualization of how AI learns, but [it is](https://arxiv.org/abs/2212.07677) and [it isn't](https://arxiv.org/abs/2310.08540) the whole picture.
+- Sidebar: you're nearly guaranteed not to find the optimal combination of several billion parameters, each tunable to several decimals. When I say "desirable," I really mean "good enough." One way of achieving incremental progress to "good enough" is called gradient descent, and it's a foundational visualization of how AI learns, but [it is](https://arxiv.org/abs/2212.07677) and [it isn't](https://arxiv.org/abs/2310.08540) the whole picture.
 
 Generative AI resembles a Chinese Room. [The Chinese Room](https://plato.stanford.edu/entries/chinese-room/) is a philosophical exercise authored by John Searle where the (in context, American) subject is locked in a room and receives symbols in Chinese slipped under the door. A computer program tells the subject what Chinese outputs to send back out under the door based on patterns and combinations of the input. The subject does not understand Chinese. Yet to an observer of Searle's room, it **appears** as if whoever is inside it has a firm understanding of the language.
 
-Searle's exercise was at the time an extension of the Turing test. He designed it to refute the theory of "Strong AI." At the time that theory was well-named, but today the AI it was talking about is not even considered AI by most. The hypothetical Strong AI was a computer program capable of understanding its inputs and outputs, and importantly *why* it took each action to solve a problem, with the ability to apply that understanding to new problems (much like our modern conception of Artificial General Intelligence). A Weak AI, on the other hand, is just the Chinese Room: taking inputs and producing outputs among defined rules. Searle reasoned that the "understanding" of a Strong AI was inherently biological, thus one could not presently exist.
+Searle's exercise was at the time an extension of the Turing test. He designed it to refute the theory of "Strong AI." At the time that theory was well-named, but today the AI it was talking about is not even considered AI by most. Throughout computing history, the term AI has been used to refer to many different ideas at the bleeding edge of computer science: Turing machines (a fancy theoretical tape recorder), decision tables (Excel on steroids), ML (yes/no, confidence), neural networks (flowcharting on steroids), and now large language modeling. So AI in itself has always been a misnomer; where Searle's AI referred to Turing machines, this entry refers to tokenization- or diffusion- based transformer models as generative AI.
+
+The hypothetical Strong AI was a computer program capable of understanding its inputs and outputs, and importantly *why* it took each action to solve a problem, with the ability to apply that understanding to new problems (much like our modern conception of Artificial General Intelligence). A Weak AI, on the other hand, is just the Chinese Room: taking inputs and producing outputs among defined rules. Searle reasoned that the "understanding" of a Strong AI was inherently biological, thus one could not presently exist.
 - Note that some computer science sources like [IBM](https://www.ibm.com/topics/strong-ai) have taken to using Strong AI to denote only AGI, which was a sufficient, not necessary quality 
 ### Causes for concern
 Here are some of the many actualized and potential misuses of AI:
@@ -29,10 +30,10 @@ Here are some of the many actualized and potential misuses of AI:
 - Obsoletes human online workforces in tech support, translation, etc
 - [[Essays/plagiarism##1 Revealing what's behind the curtain|🅿️ Reinforces systemic bias]]
 - [Violates the GDPR on a technological level](https://www.theregister.com/2024/04/29/openai_hit_by_gdpr_complaint/)
-	- I also think being unable to delete personal data that it *has* acquired and not just hallucinated is a big problem generally
+	- I also think being unable to delete personal data that it *has* acquired and not just hallucinated is a big problem generally.
 
 ## Training
-Training is a deterministic process. It's a pure, one-way, data-to-model transformation (one part of the process for which "transformer models" are named). The words are ingested and converted into one of various types of formal representations to comprise the model. It's important to remember that given a specific work and a step of the training process, it's always possible to calculate by hand the resulting state of the model after training on that work. The "black box" that's often discussed in connection with AI refers to the final state of the model, when it's no longer possible to tell what effects the data ingested at earlier steps had on the model.
+Training is a deterministic process. It's a pure, one-way, data-to-model transformation (one part of the process for which "transformer models" are named). The words are ingested and converted into one of various types of formal representations to comprise the model. It's important to remember that given a specific work and a step of the training process, it's always possible to calculate by hand the resulting state of the model after training on that work (although, with large numbers, and large models, that's just infeasible for time reasons). The "black box" that's often discussed in connection with AI refers to the final state of the model, when it's no longer possible to tell what effects the data ingested at earlier steps had on the model. In fact, models that you can run on your own computer are often distributed in the format of a one-way sequence of matrix operations which have been decomposed from the full architecture of the model, which is quite inscrutable. 
 
 Training can't be analogized to human learning processes, because when an AI trains by "reading" something, it isn't reading for the *forest*; it's reading for the *trees*. In the model, if some words are more frequently associated together, then that association is more "correct" to generate in a given scenario than other options. A parameter sometimes called "temperature" determines how far the model will stray from the correct next word. And the only data to determine whether an association *is* correct would be that training input. This means that an AI trains only on the words as they are on the page. Training can't have some external indicator of semantics that a secondary natural-language processor on the generation side could. If it could, it would need some encoding—some expression—that it turns the facts into. Instead, it just incorporates the word as it read it in, and the data about the body of text it was contained in. 
 
@@ -43,6 +44,10 @@ Some transformer models include a structure called a Multi-Layer Perceptron ("ML
 As such, idea and expression are meaningless distinctions to AI.
 
 [[Misc/training-copyright|Training AI may be copyright infringement]]. If it is, perhaps the biggest legal question surrounding AI is: [[Essays/normative-ai#Fair Use|does AI training count as fair use?]]
+## Other Related Technical Details
+While the above describes the process and results of training, there are some other parts of training that are vaguely relevant to legal claims.
+
+Namely, when you train an AI, you train it on the content of the book, not the cover/publisher information/acknowledgements/etc. Some of that is considered "copyright management information", and removal of that CMI can be the basis for another claim under the DMCA.
 ### Detour: Garbage In, Garbage Out
 
 <img src="/Attachments/common_crap.svg" alt="Common Crawl logo edited to say 'common crap' instead" style="padding:0% 5%">
@@ -54,6 +59,13 @@ A very big middle finger to the Common Crawl dataset, whose CCBot still tries to
 > 1. Try to access nonexistent URLs on my site until fail2ban blocks it
 > 2. Try to access a real URL while blocked
 > 3. Recognize that it's been blocked and switch to the next IP address on its AWS subnet (18.97.9.xx)
+
+> [!info] Even Angrier Info
+> *Another* middle finger to Perplexity, who has been [caught](https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/) using unidentified scrapers to access content.
+> 
+> `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36` is the string.
+> 
+> `grep "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" /var/log/nginx/* | wc -l` shows 34 instances in 1 week. Some of these are IP blocked automatically; the ones on the AWS subnet get through. Most are requests for a favicon on a microservice; none have attempted to access my web content yet.
 
 ## Generation
 Generative AI training, for LLMs, creates a sophisticated next-word predictor that generates text based on the words it has read and written previously. 
@@ -68,13 +80,14 @@ This is the reason that the term "hallucination" is misleading: **all AI-generat
 
 "Deep document understanding" is the name of a tool to classify regions of a file. It's a misnomer, this is not in and of itself an 'understanding' any more than drawing circles around your tax return boxes would be.
 
-"Large reasoning models" (LRMs) are LLMs that use "repeated sampling" to generate multiple responses to one query. They then use a reinforcement learner to decide which of these responses is more...responsive. Then, they generate a slew of steps which could be used to reach that response, and a learner picks which procedure looks the most correct. This isn't reasoning.
+"Large reasoning models" (LRMs) are LLMs that use "repeated sampling" to generate multiple responses to one query. They then use a reinforcement learner to decide which of these responses is more...responsive. Then, they generate a slew of steps which could be used to reach that response, and a learner picks which procedure looks the most correct. This isn't reasoning. And formally, we now have [verification](https://arxiv.org/abs/2508.01191v2) that these models are unable to apply the supposed reasoning patterns the model has "learned" to questions outside their training domain, that steps in the output do not correlate to the final answer, and that the presence of steps in the output does not change the final answer.
 ## Further Reading
 - Read about [[Essays/normative-ai|why]] copyright law should be enforced against AI in its dedicated essay.
 - If you're *really* interested in the math behind an LLM (like I am, haha), [here's a great introduction to the plumbing of a transformer model](https://santhoshkolloju.github.io/transformers/).
 	- And mathematically, it's a bad architecture for incremental performance in its use case because it is incapable of correlating text understanding. [Token Embeddings Violate the Manifold Hypothesis](https://arxiv.org/abs/2504.01002)
 - [Pivot to AI](https://pivot-to-ai.com/) is a hilariously snarky newsletter (and RSS feed!) that lampoons AI and particularly AI hype for what it is.
-- Read about the problems that generative AI is causing at the [Distributed AI Research Institute](https://www.dair-institute.org/).
+- [The AI Con](https://thecon.ai/) is a well-researched book covering the AI hype cycle, how it came to be, the ideas it is premised on, and why it will fail. 
+- Read about the problems that generative AI is causing at the [Distributed AI Research Institute](https://www.dair-institute.org/). DAIR members also contributed to The AI Con above.
 - These findings are discussed elsewhere in the AI pages, but [USCO Guidance Part 1](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-1-Digital-Replicas-Report.pdf) and [USCO Guidance Part 2](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf) are generally good resources. My reservations which I question about the documents themselves are in [[Misc/usco-guidance|USCO Guidance]].
 
 Okay, so ChatGPT lies, right? Well if we invert GenAI, it would make a /gen AI lmao

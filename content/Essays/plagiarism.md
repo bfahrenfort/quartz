@@ -12,8 +12,6 @@ lastmod: 2025-02-10
 ---
 Expect this page to expand. I plan on fleshing it out it in tandem with a full argument on why AI training and output are both copyright infringement when the model was trained on copyrighted data, because copyright and plagiarism are inextricably linked.
 
-Some arguments in this paper specifically surrounding AI are related more to legal concerns than ethical ones, and are instead housed in the [[Essays/ai-infringement|🤖 essay on copyright infringement by generative AI]]. Those links will be denoted with 🤖.
-
 > [!warning]
 > CW: discussions of systemic/societal implicit bias and inequity in the AI section. Emotional accounts of exploited work product elsewhere.
 ## My Position
@@ -61,9 +59,9 @@ Second and perhaps most importantly, because of the actual issue of AI bias, tra
 As a society, the ability to question the source of some facts presented to us is already beneficial to learning (as discussed elsewhere in this essay). But for AI, we need to ensure that the generated statements are not only correct, but not disregarding other positions categorically because they were made by sources that the AI incorrectly considers non-authoritative. An AI model could look at two positions, one with many more datapoints supporting it, and thus completely ignore the second position in its answer to a prompt. Now imagine that the former is a white man's perspective, and the second a black woman's. It's not inconceivable that an AI could enshrine systemic bias. Attribution allows people who've made careers in this field to critically examine a dataset and look for this sort of gap. In that way, it makes a **better** AI model (assuming the goal of AI is to be accurate) because of more community oversight, not just one that's more ethically trained. More information available at the [Distributed AI Research Institute](https://www.dair-institute.org/).
 - Sidebar: huh, turns out that this argument parallels the open-source philosophy.
 - Countless actual examples exist, too many to list. I documented one incident [here](https://social.treehouse.systems/@be_far/111990173625090669).
-- More directly related to my hypothetical, covert *racism* is present in LLMs as well because of the content of their training datasets. It's almost impossible to remove. But that's outside of the scope of this entry.
+- More directly related to my hypothetical, covert *racism* is present in LLMs as well because of the content of their training datasets. It's trivial to prove and almost impossible to remove. But that's outside of the scope of this entry.
 ### #2: \[citation needed\] for responses to prompts
-Not to be confused with Molly White's [excellent newsletter](https://citationneeded.news/). This requirement is a more fine-grained mitigation for the transparency issues present in the dataset at large. It also provides evidence for potential copyright infringement lawsuits if the AI has also copied the expression of the paper it sourced. Note that this isn't the be-all, end-all solution to the problem of copyright infringement by AI. Read more of my take on that [[Essays/ai-infringement|🤖 here]].
+Not to be confused with Molly White's [excellent newsletter](https://citationneeded.news/). This requirement is a more fine-grained mitigation for the transparency issues present in the dataset at large. It also provides evidence for potential copyright infringement lawsuits if the AI has also copied the expression of the paper it sourced. Note that this isn't the be-all, end-all solution to the problem of copyright infringement by AI.
 
 ---
 

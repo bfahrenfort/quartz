@@ -15,12 +15,12 @@ Bolded entries are being actively written, and may either be published with or n
 The date on this page will not be accurate in order to avoid spamming RSS feeds.
 
 - High Priority
-    - [ ] **ai-infringement**
+    - [ ] How to Fix the DMCA
     - [ ] Personhood: I Am Not A Robot (personhood credentials)
-    - [ ] wget-pipe-tar-xzvf (internet archive)
+    - [ ] *wget-pipe-tar-xzvf* (internet archive)
 - [ ] how to ruin a brand (google, SO, more generally Youtube)
 - [ ] *Fn Lock*
-- [ ] Everything you need to know to swap to Linux*
+- [ ] *Everything you need to know to swap to Linux*
 - [ ] *methodology*
 - [ ] *Judicial-action*
 - [ ] *plagiarism*
@@ -28,4 +28,3 @@ The date on this page will not be accurate in order to avoid spamming RSS feeds.
     - [ ] https://www.404media.co/google-leak-reveals-thousands-of-privacy-incidents/ to my-cloud
 - [ ] FPV
 - [ ] In the interest of transparency and reducing barriers, put together and periodically update an entry with the tips in the legal profession that are typically institutional knowledge. Learning in Public: A Window into Private Law
-- [ ] Immich writeup
