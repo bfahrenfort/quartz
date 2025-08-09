@@ -26,4 +26,5 @@ Finally, remember that perfect is the enemy of good enough. While we're having t
 - [[Misc/training-copyright|Copyright applied to training]]
 - [[Misc/generation-copyright|Copyright applied to output]]
 - [[Essays/normative-ai|Why copyright ought to be applied to AI]]
+- [[Misc/ai-integrity|Academic Integrity and AI]]
 - [[Essays/no-ai-fraud-act|No AI FRAUD Act bill, Section 230, and platforms]]

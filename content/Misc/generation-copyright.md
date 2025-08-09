@@ -56,3 +56,4 @@ Of course, if we skip establishing the model as an infringing derivative, there'
 ## Further Reading
 - Sibling entry on [[Misc/training-copyright|training and copyright]]
 - Who should be responsible for the harm caused by a generated work? [[Essays/normative-ai#Who's holding the bag?]]
+- [[Misc/usco-guidance#Part 2 Generated Output|My thoughts on the USCO guidance on copyright and genAI output]]

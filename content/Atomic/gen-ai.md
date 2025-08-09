@@ -89,5 +89,11 @@ This is the reason that the term "hallucination" is misleading: **all AI-generat
 - [The AI Con](https://thecon.ai/) is a well-researched book covering the AI hype cycle, how it came to be, the ideas it is premised on, and why it will fail. 
 - Read about the problems that generative AI is causing at the [Distributed AI Research Institute](https://www.dair-institute.org/). DAIR members also contributed to The AI Con above.
 - These findings are discussed elsewhere in the AI pages, but [USCO Guidance Part 1](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-1-Digital-Replicas-Report.pdf) and [USCO Guidance Part 2](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf) are generally good resources. My reservations which I question about the documents themselves are in [[Misc/usco-guidance|USCO Guidance]].
+- Part of a series on AI.
+	- [[Misc/training-copyright|Copyright applied to training]]
+	- [[Misc/generation-copyright|Copyright applied to output]]
+	- [[Essays/normative-ai|Why copyright ought to be applied to AI]]
+	- [[Misc/ai-integrity|Academic Integrity and AI]]
+	- [[Essays/no-ai-fraud-act|No AI FRAUD Act bill, Section 230, and platforms]]
 
 Okay, so ChatGPT lies, right? Well if we invert GenAI, it would make a /gen AI lmao
