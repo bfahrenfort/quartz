@@ -12,7 +12,7 @@ draft: false
 ---
 I've seen many news articles and opinion pieces recently that support training generative AI, most particularly LLMs (such as the ChatGPT/GPT-4 family, LLaMa, Bard, Claude, and countless others) on the broader internet, as well as on more traditional copyrighted works. The general sentiment from the industry and some critics is that training should not consider the copyright holders for all of the above. 
 
-<img src="/Attachments/but-he-can.jpg" alt="'I know, but he can' meme, with the RIAA defeating AI art for independent illustrators" style="height: 30em;margin: 0% 25%" loading="lazy">
+<img src="/Attachments/but-he-can.jpg" alt="'I know, but he can' meme, with the RIAA defeating AI art for independent illustrators" style="margin: 0em 5%" loading="lazy">
 
 This is likely because there's a growing sentiment against copyright in general. Copyright can enable centralization of rights when paired with a capitalist economy, which is what we've historically experienced with the advent of copyright repositories like record labels and publishing companies. It's even statutorily enshrined as the "work-for-hire" doctrine. AI has the potential to be an end-run around these massive corporations' rights, which many see as a benefit.
 
