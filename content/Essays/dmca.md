@@ -13,6 +13,8 @@ Sometimes, I feel like the conversation around AI specifically tends to swallow 
 Importantly, I think we must consider the systems as a whole; because the effects leading to the problems below are not merely caused by the DMCA itself, but also the implementation of nets and filters such as the Youtube Content ID system.
 ## Problems
 
+### Detour: TAKE IT DOWN ACT
+
 ## Solutions
 
 ## Further Reading
