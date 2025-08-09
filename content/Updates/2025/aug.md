@@ -21,5 +21,6 @@ AI've made the difficult decision to divide my massive AI essay, which approache
 - Content Update: [[Essays/plagiarism|Plagiarism IS Bad, Actually]]
 ## Status Updates
 - Modified styles to fix callout indentation
+- Mobile explorer now works!
 ## Helpful Links
 [[todo-list|Site To-Do List]] | [[Garden/index|Home]]

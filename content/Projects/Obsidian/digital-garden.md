@@ -5,7 +5,7 @@ tags:
   - webdev
   - difficulty-moderate
 date: 2023-08-23
-lastmod: 2024-01-20
+lastmod: 2025-08-09
 ---
 ...It's this website.
 
@@ -40,7 +40,7 @@ You don't want bad spiders/crawlers poking around on your site to try to find vu
 ## Using this Site
 - [Explorer](https://quartz.jzhao.xyz/features/explorer) 
 	- \[Desktop\] on your left: jump to any page on the site.
-	- \[Mobile\] visit the [[sitemap|Sitemap]].
+	- \[Mobile\] hamburger menu: same as above.
 - [Graph View](https://help.obsidian.md/Plugins/Graph+view): Below content, above comments
 	- An [[Programs I Like/obsidian|Obsidian]] feature which acts as a map of what pages link to each other. Click on it for a map of the entire site and how it interconnects. It doesn't use Obsidian's implementation directly, but since [[Projects/Obsidian/digital-garden|the site generator I use]] is heavily inspired by Obsidian and [Obsidian Publish]( https://obsidian.md/publish ), it remains.
 - Backlinks: Below content, above comments
