@@ -28,7 +28,7 @@ Here are some of the many actualized and potential misuses of AI:
 - Other fraud, like telemarketing/robocalls, phishing, etc
 - Competition with actual artists and authors (I am VERY excited to see where trademark law evolves around trademarking one's art or literary style. Currently, the arguments are weak)
 - Obsoletes human online workforces in tech support, translation, etc
-- [[Essays/plagiarism##1 Revealing what's behind the curtain|🅿️ Reinforces systemic bias]]
+- [[Essays/plagiarism#1 Revealing what's behind the curtain|🅿️ Reinforces systemic bias]]
 - [Violates the GDPR on a technological level](https://www.theregister.com/2024/04/29/openai_hit_by_gdpr_complaint/)
 	- I also think being unable to delete personal data that it *has* acquired and not just hallucinated is a big problem generally.
 
