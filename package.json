@@ -94,6 +94,7 @@
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0",
     "vfile": "^6.0.3",
+    "wawoff2": "^2.0.1",
     "workerpool": "^9.3.3",
     "ws": "^8.18.3",
     "yargs": "^18.0.0"
