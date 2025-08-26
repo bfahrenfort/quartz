@@ -6,7 +6,7 @@ tags:
   - repair
   - framework
 date: 2025-07-25
-lastmod: 2025-08-03
+lastmod: 2025-08-10
 draft: false
 ---
 > [!question] "Can I pay extra for there not to be an app?"
@@ -21,7 +21,7 @@ If I had connected my fancy new 4K TV to WiFi, it would have:
 - Periodically taken screenshots of everything that comes on the screen
 	- Sold the resulting info to data brokers for targeted advertising
 
-I'm not happy with a product that does that. Instead, I took my old Framework Laptop mainboard from [Projects/my-computer|My Computer], put it in a cooler master case, and turned into a Linux-powered theater PC, controlled with a regular keyboard and mouse. All the functionality of a smart TV with none of the tracking. Story of install documented in the [[#Write-up]], but the end result is 
+I'm not happy with a product that does that. Instead, I took my old Framework Laptop mainboard from [[Projects/my-computer|My Computer]], put it in a cooler master case, and turned into a Linux-powered theater PC, controlled with a regular keyboard and mouse. All the functionality of a smart TV with none of the tracking. Story of install documented in the [[#Write-up]], but the end result is 
 ## Specs
 ### Hardware
 - Framework i5-1135g7 (Batch 6)

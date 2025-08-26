@@ -12,6 +12,8 @@ draft: false
 ---
 A [[Atomic/gen-ai|generative AI]]'s output may infringe its training data.
 
+> [!info] Part of a [[Misc/ai-prologue#Further Reading|Series on AI]].
+
 First, generated output is certainly not copyrightable. The US is extremely strict when it comes to the human authorship requirement for protection. If an AI is seen as the creator, the requirement is obviously not satisfied. And the human "pushing the button" isn't enough either. But does the output infringe the training data? It depends.
 ## Human Authorship
 [According to the US Copyright Office](https://www.federalregister.gov/documents/2023/03/16/2023-05321/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence), AI-generated works do not satisfy the human authorship requirement. This makes them uncopyrightable, but more importantly, it also gives legal weight to the distinction between the human and AI learning process. 

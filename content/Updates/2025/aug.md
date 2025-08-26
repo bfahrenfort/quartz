@@ -18,9 +18,11 @@ AI've made the difficult decision to divide my massive AI essay, which approache
 	- [[Misc/generation-copyright|Theories of Copyright: AI Output]]
 - New: [[Projects/dumb-tv|Operation Dumb TV]]
 - New: [[Projects/immich|Immich: Escaping the Cloud]]
+- New: [[Projects/secure-boot|Secure Boot on Arch Linux]]
 - Content Update: [[Essays/plagiarism|Plagiarism IS Bad, Actually]]
 ## Status Updates
 - Modified styles to fix callout indentation
 - Mobile explorer now works!
+- Social share previews now look a lot better. This has the side effect of making builds take absolutely forever.
 ## Helpful Links
 [[todo-list|Site To-Do List]] | [[Garden/index|Home]]

@@ -5,7 +5,7 @@ tags:
   - linux
   - difficulty-moderate
 date: 2023-08-23
-lastmod: 2025-02-24
+lastmod: 2025-08-26
 ---
 ## Hardware
 First off, I don’t believe in having more than one personal computer, as I think it’s wasteful, especially when your profession will provide you with an e-waste work laptop whether you like it or not. As such, I’m an eGPU apologist! My setup consists of a laptop connected to a Thunderbolt dock on one tb4 controller and an NVIDIA eGPU on the other.
@@ -37,6 +37,8 @@ So yeah, it’s pretty cool. Here are my peripherals:
 I was a longtime Windows 10 user, and dabbled in Linux a bit, but eventually got fed up enough with Windows that I swapped for good. Currently, I'm running Arch Linux and X11 GNOME, highly customized.
 
 Previously, I’ve also daily driven Fedora and Linux Mint. You can read more about my history with Linux on [[Essays/on-linux|its dedicated page]].
+
+I now use [[Projects/secure-boot|secure boot]] to keep my whole disk encryption sane.
 ### On User Interface
 I’ve daily driven XFCE, Budgie, Unity, and KDE before. No DE really caught my eye in a way that feels both intuitive and productive until GNOME. The overview is such a neat concept that’s performant, useful for rapid task switching, and pretty. I recommend the Blur My Shell extension for best results, as well as an extension that gives you trackpad gestures for your windowing system. 
 

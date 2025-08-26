@@ -6,10 +6,13 @@ tags:
   - ai
   - legal
 date: 2024-11-02
-lastmod: 2025-08-08
+lastmod: 2025-08-10
 draft: false
 ---
 Reasonable minds can and should differ on whether copyright ought to be enforced against [[Atomic/gen-ai|GenAI]]. I think it should be. 
+
+> [!info] Part of a [[Misc/ai-prologue#Further Reading|Series on AI]].
+
 
 The most important debate is up first, but the others are not particularly ordered.
 
@@ -93,7 +96,7 @@ Well, here it is once more. When the proprietor is a website (or, really, an "in
 
 I think that you can identify a strangely inverse relationship between fair use and § 230 immunity. If the content is directly what was put in (and is not fair use), then it's user content, and Section 230 immunity applies. If the content by an AI is *not* just the user's content and is in fact transformative fair use, then it's the website's content, not user content, and the website can be sued for the effects of their AI. Someone makes an investment decision based on the recommendation of ChatGPT? Maybe it's financial advice. I won't bother with engaging the effects further here. I have written about § 230 and AI [[no-ai-fraud-act#00230: Incentive to Kill|elsewhere]], albeit in reference to AI-generated user content *hosted* by the platform.
 
-There's also the tension between Section 230 and the First Amendment. Much like the fair use question, if content is not fair use, it's not the platform's speech, and the platform cannot claim First Amendment protection. But if the 
+There's also the tension between Section 230 and the First Amendment. Much like the fair use question, if content is not fair use, it's not the platform's speech, and the platform cannot claim First Amendment protection. But if the content is fair use, the platform is adopting it as its own, and might be entitled to First Amendment protection.
 - This was most illustrated by *Garcia v. Character Technologies*, the wrongful death case against character-dot-ai. Character and Alphabet claimed both Section 230 and First Amendment defenses, which the judge has thus far regarded with suspicion.
 ## The First Amendment and the "Right to Read"
 This argument favors allowing GAI to train on the entire corpus of the internet, copyright- and attribution-free. This bootstraps GAI output into being lawful as well, because it upends the market effect factor—training is consumption, not competition. The position most commonly taken is that the First Amendment protects a citizen's right to access information, and that there should be an analogous right for generative AI.

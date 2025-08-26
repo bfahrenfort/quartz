@@ -12,6 +12,8 @@ draft: false
 ---
 Generative AI training may be copyright infringement.
 
+> [!info] Part of a [[Misc/ai-prologue#Further Reading|Series on AI]].
+
 > [!info] *mea culpa*
 > It's very difficult to keep discussions of training and generation separate because they're related concepts. They do not directly flow from one another though, so I've done my best to divide the subject.
 
