@@ -1,6 +1,6 @@
 ---
 title: 08/25 - Summary of Changes
-draft: true
+draft: false
 tags:
   - "#update"
 date: 2025-08-03
