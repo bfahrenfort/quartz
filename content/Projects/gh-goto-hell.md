@@ -16,8 +16,8 @@ GitHub CLI has begun opting all users into telemetry. Not a fan. Here's how to d
 
 | `gh` Command                              | Alternative                                                                                                                                                                  |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `gh auth login`                           | SSH config; see [[#Authentication]]                                                                                                                                          |
-| `gh auth switch`                          | Local repository configuration; see [[#Multiaccount]]                                                                                                                        |
+| `gh auth login`                           | SSH config; see below                                                                                                                                                        |
+| `gh auth switch`                          | Local repository configuration; see below                                                                                                                                    |
 | `gh alias`                                | Shell alias, alternatively `git config --global alias.<alias name>`                                                                                                          |
 | `gh api`                                  | Web requests; `curl`                                                                                                                                                         |
 | `gh agent-task`, `gh copilot`, `gh skill` | Learn programming                                                                                                                                                            |
