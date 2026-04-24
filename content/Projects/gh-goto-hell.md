@@ -17,7 +17,7 @@ GitHub CLI has begun opting all users into telemetry. Not a fan. Here's how to d
 | `gh` Command                              | Alternative                                                                                                                                                                  |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `gh auth login`                           | SSH config; see [[#Authentication]]                                                                                                                                          |
-| `gh auth switch`                          | Local repository configuration; see [[#Multi-Account]]                                                                                                                       |
+| `gh auth switch`                          | Local repository configuration; see [[#Multiaccount]]                                                                                                                        |
 | `gh alias`                                | Shell alias, alternatively `git config --global alias.<alias name>`                                                                                                          |
 | `gh api`                                  | Web requests; `curl`                                                                                                                                                         |
 | `gh agent-task`, `gh copilot`, `gh skill` | Learn programming                                                                                                                                                            |
@@ -47,7 +47,7 @@ Host github.com
 ```
 
 Now, whenever you want to push to a repo, make sure the upstream you want to push to is SSH formatted: `git remote set-url origin git@github.com:user/repo.git`. Pull and push will use the SSH key you set to authenticate!
-### Multi-Account
+### Multiaccount
 Important step: **Unset your global name and email.**
 `git config --global --unset user.name` 
 `git config --global --unset user.email` 
