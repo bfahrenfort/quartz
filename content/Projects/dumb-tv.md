@@ -6,9 +6,12 @@ tags:
   - repair
   - framework
 date: 2025-07-25
-lastmod: 2025-08-10
+lastmod: 2026-08-16
 draft: false
 ---
+>[!info] Out of Date
+>This project has since been replaced with the Steam Machine / gabecube in perma desktop mode so that I can actually use it for gaming, although I did try streaming games from my computer to this dumb tv and found it quite capable at that. I don't think the steam machine is particularly interesting, so I'm not going to write that up. You can expect another project with this same mainboard in future!
+
 > [!question] "Can I pay extra for there not to be an app?"
 > Yes.
 
