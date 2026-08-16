@@ -81,7 +81,7 @@ If you have not yet tried the option to put the tpm in setup mode (or just follo
 4. **DO NOT DELETE ANY** "DBX" entries. If you do, follow the above callout and try steps 1-3 here again.
 5. Exit saving changes and boot back into Linux!
 #### Detour 2: snapshot booting
-If you use `grub-btrfs`, you probably had `grub-btrfs-overlayfs` in your hooks. This is incompatible with systemd-boot. A complete write-up of the issue is in [this GitHub issue](), but you can solve it by doing both of the below:
+If you use `grub-btrfs`, you probably had `grub-btrfs-overlayfs` in your hooks. This is incompatible with systemd initramfs. A complete write-up of the issue is in [this GitHub issue](https://github.com/Antynea/grub-btrfs/issues/199), but you can solve it by doing both of the below:
 - Adding `sd-volatile` to your hooks (you do not need grub-btrfs-overlayfs; see my complete hooks above) 
 - Adding `GRUB_BTRFS_SNAPSHOT_KERNEL_PARAMETERS="systemd.volatile=overlay"` to your `/etc/default/grub-btrfs/config`
 Then, your root subvolume will be from the snapshot and can't be modified (any changes will get wiped out on reboot even though it appears RW), but other subvolumes will be persistent.
